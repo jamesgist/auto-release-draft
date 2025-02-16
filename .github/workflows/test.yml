@@ -14,9 +14,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Create a release draft for a versin tag
         id: create_release_draft
         uses: ./
       - name: Print the URL of the release draft
-        run: echo ${{ steps.create_release_draft.outputs.time }}
+        run: echo "${{ steps.create_release_draft.outputs.time }}"
